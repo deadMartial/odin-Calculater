@@ -13,7 +13,9 @@
     aspect-ratio: .8;
     background-color: black;
     padding: 1px;
-    margin: auto;
+    margin: 15vh auto;
+    
+    
 }
 p, .rows{
     flex-grow: 1;
@@ -23,13 +25,14 @@ p, .rows{
 p{
     background-color: #b2b9b7;
     text-align: end;
-    font-size:8vw ;
+    font-size:6vw ;
     margin-bottom: 2px;
     border-radius: 2%;
-    height : 20%;
+    height : 15%;
     flex-grow: 0;
     overflow: scroll;
     /* direction: rtl; */
+    padding: 10px;
 }
 
 .rows{

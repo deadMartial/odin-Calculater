@@ -8,12 +8,13 @@ function multiply(a,b) {
     return parseInt(a)*parseInt(b);
 }
 function divide(a,b) {
-    return parseFloat(a)/parseFloat(b);
+    return (parseFloat(a)/parseFloat(b)).toFixed(8);
 }
 
 let op1=0;
 let op2=0;
 let op="";
+
 
 const btns=document.querySelectorAll(".ops");
 btns.forEach((btn)=> {
@@ -40,7 +41,7 @@ function printScreen(e) {
     }
     else if (e.target.classList.contains("op")) {
         printScreenOp(e);
-    }console.log(op," ",op1," ",op2)
+    }console.log(op," ",op1," ",op2);
 }
 
 
@@ -55,6 +56,9 @@ function printScreenNum(e) {
 function printScreenUtil(e) {
     if(e.target.textContent==="AC") {
         sre.textContent="";
+        op="";
+        op1=0;
+        op2=0;
     }
     else if(e.target.textContent==="=") {
         op2=parseInt(sre.textContent);
@@ -69,8 +73,16 @@ function printScreenOp(e) {
     if(sre.textContent==="") {
         op1=0;return;
     }
-    else if(op!=="") {
-        sre.textContent=operate(op,op2,op2);
+
+    // if()
+
+
+     if(op!=="") {
+        
+        op=e.target.textContent;
+        op2=parseInt(sre.textContent);console.log(op+op1+op2);
+        sre.textContent=operate(op,op1,op2).toString();
+        console.log(op," ",op1," ",op2," ", sre.textContent)
 
     }
     
