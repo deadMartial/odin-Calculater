@@ -1,14 +1,18 @@
 function add(a,b) {
-    return parseInt(a)+parseInt(b);
+    return parseFloat(a)+parseFloat(b).toFixed(2);
 }
 function subtract(a,b) {
-    return parseInt(a)-parseInt(b);
+    return parseFloat(a)-parseFloat(b).toFixed(2);
 }
 function multiply(a,b) {
-    return parseInt(a)*parseInt(b);
+    return parseFloat(a)*parseFloat(b).toFixed(2);
 }
 function divide(a,b) {
-    return (parseFloat(a)/parseFloat(b)).toFixed(8);
+    return (parseFloat(a)/parseFloat(b)).toFixed(2);
+}
+
+function modulo(a,b){
+    return parseFloat(a)%parseFloat(b).toFixed(2);
 }
 
 let op1=0;
@@ -61,11 +65,11 @@ function printScreenUtil(e) {
         op2=0;
     }
     else if(e.target.textContent==="=") {
-        op2=parseInt(sre.textContent);
+        op2=parseFloat(sre.textContent);
         sre.textContent=operate(op,op1,op2);
         op="";
         op2=0;
-        op1=parseInt(sre.textContent)
+        op1=parseFloat(sre.textContent)
     }
 }
 
@@ -80,13 +84,13 @@ function printScreenOp(e) {
      if(op!=="") {
         
         op=e.target.textContent;
-        op2=parseInt(sre.textContent);console.log(op+op1+op2);
+        op2=parseFloat(sre.textContent);console.log(op+op1+op2);
         sre.textContent=operate(op,op1,op2).toString();
         console.log(op," ",op1," ",op2," ", sre.textContent)
 
     }
     
-        op1=parseInt(sre.textContent);
+        op1=parseFloat(sre.textContent);
         op=e.target.textContent;
         sre.textContent="";
     
