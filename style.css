@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding: 0%;
     margin: 0%;
+    font-family: monospace;
 }
 
 .containar {
@@ -25,7 +26,7 @@ p, .rows{
 p{
     background-color: #b2b9b7;
     text-align: end;
-    font-size:6vw ;
+    font-size: 60px;;
     margin-bottom: 2px;
     border-radius: 2%;
     height : 15%;
@@ -44,8 +45,21 @@ p{
 
 .ops{
     flex:1;
+    font-size: 55px;
+    border: 1px solid black;
+    border-radius: 10%;
 }
 
 .ze{
     flex: 2;
+}
+
+.util{
+    background-color: #1e90ff;
+}
+.op{
+    background-color: #ff8f1f;
+}
+.num{
+    background-color: #217c7e;
 }

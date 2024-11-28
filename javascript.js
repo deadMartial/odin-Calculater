@@ -1,18 +1,18 @@
 function add(a,b) {
-    return parseFloat(a)+parseFloat(b).toFixed(2);
+    return (parseFloat(a)+parseFloat(b)).toFixed(2);
 }
 function subtract(a,b) {
-    return parseFloat(a)-parseFloat(b).toFixed(2);
+    return (parseFloat(a)-parseFloat(b)).toFixed(2);
 }
 function multiply(a,b) {
-    return parseFloat(a)*parseFloat(b).toFixed(2);
+    return (parseFloat(a)*parseFloat(b)).toFixed(2);
 }
 function divide(a,b) {
     return (parseFloat(a)/parseFloat(b)).toFixed(2);
 }
 
 function modulo(a,b){
-    return parseFloat(a)%parseFloat(b).toFixed(2);
+    return (parseFloat(a)%parseFloat(b)).toFixed(2);
 }
 
 let op1=0;
@@ -85,7 +85,7 @@ function printScreenOp(e) {
         
         op=e.target.textContent;
         op2=parseFloat(sre.textContent);console.log(op+op1+op2);
-        sre.textContent=operate(op,op1,op2).toString();
+        sre.textContent=operate(op,op1,op2)
         console.log(op," ",op1," ",op2," ", sre.textContent)
 
     }
